@@ -1,0 +1,10 @@
+include LICENSE Makefile README.md CHANGELOG.md
+include man/driftstamp.1
+recursive-include tools *.py
+recursive-include tests *.py
+recursive-include docs *.md
+recursive-include examples *.py *.md *.toml LICENSE
+global-exclude __pycache__ *.py[cod]
+prune examples/redhat_plugin/build
+prune examples/redhat_plugin/dist
+prune examples/redhat_plugin/driftstamp_redhat_example.egg-info

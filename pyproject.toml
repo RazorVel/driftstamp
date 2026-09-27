@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "driftstamp"
+dynamic = ["version"]
+description = "Rediscover machine customizations and prepare reviewed migration bundles"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+[project.scripts]
+driftstamp = "driftstamp.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["driftstamp*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "driftstamp.__version__"}
+
+[tool.setuptools.data-files]
+"share/man/man1" = ["man/driftstamp.1"]
+
+[tool.setuptools]
+license-files = ["LICENSE"]

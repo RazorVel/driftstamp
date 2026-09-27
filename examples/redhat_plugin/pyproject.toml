@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "driftstamp-redhat-example"
+version = "0.1.0"
+description = "An intentionally unsupported RPM collector illustrating Driftstamp's extension API"
+requires-python = ">=3.11"
+dependencies = ["driftstamp"]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+
+[project.entry-points."driftstamp.modules"]
+example-rhel-config = "driftstamp_redhat_example:RedHatExample"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["driftstamp_redhat_example*"]
