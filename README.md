@@ -1,5 +1,9 @@
 # Driftstamp
 
+<p align="center">
+  <img src="docs/assets/logo.png" alt="Driftstamp logo" width="180">
+</p>
+
 **Rediscover the changes that make a machine yours.**
 
 Driftstamp is a local CLI for finding forgotten customizations, keeping notes
